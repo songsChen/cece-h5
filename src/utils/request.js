@@ -2,7 +2,8 @@ import axios from "axios";
 
 // create an axios instance
 const service = axios.create({
-    baseURL: "https://api.cece.com", // url = base url + request url
+    baseURL:
+        process.env.NODE_ENV === "production" ? "https://api.cece.com" : "/api", // url = base url + request url
     // withCredentials: true, // send cookies when cross-domain requests
     timeout: 5000, // request timeout
 });

@@ -48,8 +48,9 @@ module.exports = {
             },
             devServer: {
                 proxy: {
-                    "/": {
+                    "/api": {
                         target: print_env.GET_URL,
+                        pathRewrite: { "^/api": "" },
                         ws: false,
                         changeOrigin: true,
                         bypass: function(req, res, proxyOptions) {

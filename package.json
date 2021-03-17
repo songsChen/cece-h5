@@ -4,8 +4,9 @@
     "private": true,
     "scripts": {
         "serve": "cross-env VUE_APP_ENV=test vue-cli-service serve",
+        "serve:prod": "cross-env VUE_APP_ENV=production vue-cli-service serve",
         "serve:analy": "cross-env VUE_APP_ENV=analysis vue-cli-service serve",
-        "build": "cross-env VUE_APP_ENV=production vue-cli-service build",
+        "build": "cross-env vue-cli-service build",
         "lint": "cross-env vue-cli-service lint"
     },
     "dependencies": {
