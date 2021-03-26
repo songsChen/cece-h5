@@ -19,12 +19,13 @@
   <script>
     (function (doc, win) {
       function change() {
-        doc.documentElement.style.fontSize = doc.documentElement.clientWidth * 100 / 750 + 'px';
+        doc.documentElement.style.fontSize = doc.documentElement.clientWidth * 100 / 375 + 'px';
       }
       change();
       addEventListener('resize', change, false);
     })(document, window);
   </script>
+  <script src="https://m.cece.com/lib/js/sensors.js"></script>
   <div id="app"></div>
   <!-- built files will be auto injected -->
 </body>

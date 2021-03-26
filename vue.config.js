@@ -6,7 +6,10 @@
 let print_env = require("./print_env.js");
 module.exports = {
     // 选项...
+    publicPath: "./",
     chainWebpack: (config) => {
+        // 移除 prefetch 插件，因为项目是非单页面，提前加载作用不大，所以移除prefetch插件
+        config.plugins.delete("prefetch");
         if (process.env.VUE_APP_ENV === "analysis") {
             const WebpackBundleAnalyzer = require("webpack-bundle-analyzer")
                 .BundleAnalyzerPlugin;
